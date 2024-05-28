@@ -7,6 +7,8 @@ import 'package:hse_project/views/apps/ecommerce/products.dart';
 import 'package:hse_project/views/apps/jobs/job_vacancee_page.dart';
 import 'package:hse_project/views/apps/music/music_screen.dart';
 import 'package:hse_project/views/apps/nft/dashboard_page.dart';
+import 'package:hse_project/views/apps/safety/kurul/kurul_yonetimi.dart';
+import 'package:hse_project/views/apps/safety/work_safety.dart';
 import 'package:hse_project/views/auth/forgot_password.dart';
 import 'package:hse_project/views/auth/locked.dart';
 import 'package:hse_project/views/auth/login.dart';
@@ -101,6 +103,14 @@ getPageRoute() {
         middlewares: [AuthMiddleware()]),
 
     ///========== Apps =================///
+    GetPage(
+        name: '/apps/work',
+        page: () => WorkSafetyPage(),
+        middlewares: [AuthMiddleware()]),
+    GetPage(
+        name: '/apps/work/kurul',
+        page: () => KurulYonetimiPage(),
+        middlewares: [AuthMiddleware()]),
     GetPage(
         name: '/apps/ecommerce/products',
         page: () => EcommerceProductsPage(),
